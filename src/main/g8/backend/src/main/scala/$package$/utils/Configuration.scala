@@ -20,5 +20,5 @@ trait Configuration {
   val dbUser: String = databaseConfig.getString("db.user")
   val dbPassword: String = databaseConfig.getString("db.password")
   // In Memory database configuration
-val h2Conf: ConfigObject = config.getObject("h2mem1"
+  val h2Conf: ConfigObject = config.getObject("h2mem1")
 }
