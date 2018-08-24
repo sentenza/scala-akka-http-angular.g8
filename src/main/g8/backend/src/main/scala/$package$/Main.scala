@@ -3,25 +3,30 @@ package $package$
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
-// http
-// import $package$.http.HttpService
-
-// models
-// import $package$.models.User
-
-// services
-import $package.services.{AppService, UsersService}
-import $package$.utils.Persistence
-
-// Utils
-import $package$.utils.Configuration
-
 import scala.io.StdIn
-// The Server dependencies
+// Server dependencies
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
 import scala.util.{Failure, Success}
+// Utils
+import $package$.utils.Configuration
 
-Object Main extends App with Configuration {
-    println("I'm alive!")
+import $package$.utils.Persistence
+
+/**
+ * The main class that will start the server.
+ * It manages the exit point of the application
+ */
+object Main extends App with Configuration {
+  // to run the route
+  implicit val system: ActorSystem = ActorSystem()
+  implicit val materializer: ActorMaterializer = ActorMaterializer()
+  // for the future map/flatmap at the end and future in fetchItem and saveOrder
+  implicit val executionContext = system.dispatcher
+  val persistence = new Persistence()
+
+  println(s"Server online at http://\$httpHost:\$httpPort/v1")
+  println("Press RETURN to stop")
+
+  Await.result(system.whenTerminated, Duration.Inf)
 }
