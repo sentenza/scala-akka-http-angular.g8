@@ -1,6 +1,44 @@
 # scala-akka-http-angular.g8
 
-A [Giter8][g8] template for a Scala Akka-HTTP application wich will be shipped with an Angular 6+ front end. To know more on how to create to create a new g8 template read the [official documentation][g8 docs].
+A [Giter8][g8] template for a [Scala][scala] [Akka HTTP][akka] application wich will be shipped with an [Angular][angularweb] 6+ front end. To know more on how to create to create a new g8 template read the [official documentation][g8 docs].
+
+NOTE: [SBT][sbt] is used to instantiate the skeleton
+
+## Getting Started
+
+Download an install [SBT][sbt] and run it on the command line to create a new [Scala][scala]/[Angular][angularweb] project using the skeleton:
+
+```
+$ sbt new sentenza/scala-akka-http-angular.g8.g8
+```
+
+The template parameters are as follows:
+
+* `name` is the name of the path the skeleton will instantiate to;
+
+Once instantiated, you'll need to...
+
+### Init the Angular Front End application
+
+```bash
+$ cd ui
+$ npm install
+```
+
+And then, in order to load the development Angular server, one can simply execute `ng serve`. 
+
+## Skeleton
+
+The skeleton has a few things to make life a little easier:
+
+* `.editorconfig` file for indentation
+* `.gitignore` for obvious reasons
+
+In the `build.sbt` file I arbitrarily chose some common libraries I use quite frequently for the skeleton:
+
+* [typesafe config][config] for parsing `application.properties`
+
+It has default `application.properties` and `logback.xml` resource files that are used. 
 
 ## Testing the template
 
@@ -19,6 +57,10 @@ $ sbt
 > ~ compile
 ```
 
-[g8]: http://www.foundweekends.org/giter8/
-[g8 docs]: http://www.foundweekends.org/giter8/template.html
-[g8 test]: http://www.foundweekends.org/giter8/testing.html
+[g8]:               http://www.foundweekends.org/giter8/
+[g8 docs]:          http://www.foundweekends.org/giter8/template.html
+[g8 test]:          http://www.foundweekends.org/giter8/testing.html
+[angularweb]:       https://angular.io/
+[sbt]:              https://www.scala-sbt.org/index.html
+[scala]:            http://www.scala.org
+[akka]:             https://doc.akka.io/docs/akka-http/current/

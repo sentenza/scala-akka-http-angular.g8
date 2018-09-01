@@ -10,6 +10,8 @@ lazy val slf4jVersion = "$slf4j_version$"
 lazy val h2Version = "$h2_version$"
 lazy val ammoniteVersion = "$ammonite_version$"
 
+lazy val npmVersion = taskKey[Unit]("Show npm version")
+lazy val ngInit = taskKey[Unit]("Inits a new Angular application, using the ui folder")
 lazy val updateNpm = taskKey[Unit]("Update npm")
 lazy val npmTask = inputKey[Unit]("Run npm with arguments")
 
@@ -21,6 +23,13 @@ lazy val commonSettings = Seq(
 )
 
 lazy val rootSettings = Seq (
+    npmVersion := {
+        haltOnCmdResultError(Process("npm -version", baseDirectory.value / "ui").!)
+    },
+    ngInit := {
+        haltOnCmdResultError(Process("npm install -g @angular/cli", baseDirectory.value).!)
+        haltOnCmdResultError(Process("ng new ui --style=scss --skip-install", baseDirectory.value).!)
+    },
     updateNpm := {
         println("Updating npm dependencies")
         haltOnCmdResultError(Process("npm install", baseDirectory.value / "ui").!)
