@@ -9,7 +9,7 @@ NOTE: [SBT][sbt] is used to instantiate the skeleton
 Download an install [SBT][sbt] and run it on the command line to create a new [Scala][scala]/[Angular][angularweb] project using the skeleton:
 
 ```
-$ sbt new sentenza/scala-akka-http-angular.g8.g8
+$ sbt new sentenza/scala-akka-http-angular.g8
 ```
 
 The template parameters are as follows:
