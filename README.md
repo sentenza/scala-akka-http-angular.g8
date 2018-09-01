@@ -18,6 +18,15 @@ The template parameters are as follows:
 
 Once instantiated, you'll need to...
 
+### Init the Angular Front End application
+
+```bash
+$ cd ui
+$ npm install
+```
+
+And then, in order to load the development Angular server, one can simply execute `ng serve`. 
+
 ## Skeleton
 
 The skeleton has a few things to make life a little easier:
@@ -29,13 +38,7 @@ In the `build.sbt` file I arbitrarily chose some common libraries I use quite fr
 
 * [typesafe config][config] for parsing `application.properties`
 
-It has default `application.properties` and `logback.xml` resource files that are used. And for the skeleton code, there are only three files:
-
-* `Main.scala` is the entry point that runs a simple `IO` program.
-* `Config.scala` has basic reading/writing of a JSON configuration file.
-* `Opts.scala` handles a simple command line parsing example.
-
-The default `Opts` implementation has the (optional, lazy) ability to load and parse a `Config` from disk on startup. This is there for applications that need project settings that should not be stored in the `application.properties` file: API keys, passwords, user settings, etc.
+It has default `application.properties` and `logback.xml` resource files that are used. 
 
 ## Testing the template
 
