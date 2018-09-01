@@ -28,7 +28,7 @@ lazy val rootSettings = Seq (
     },
     ngInit := {
         haltOnCmdResultError(Process("npm install -g @angular/cli", baseDirectory.value).!)
-        haltOnCmdResultError(Process("ng new ui --style scss", baseDirectory.value).!)
+        haltOnCmdResultError(Process("ng new ui --style=scss --skip-install", baseDirectory.value).!)
     },
     updateNpm := {
         println("Updating npm dependencies")
