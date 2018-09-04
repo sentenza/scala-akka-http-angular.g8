@@ -4,6 +4,10 @@ A [Giter8][g8] template for a [Scala][scala] [Akka HTTP][akka] application wich 
 
 NOTE: [SBT][sbt] is used to instantiate the skeleton
 
+### About Akka HTTP and Angular
+
+[Akka HTTP](http://doc.akka.io/docs/akka/2.4.2/scala/http/index.html) is an Akka module, originating from spray.io, for building reactive REST services with an elegant DSL. akka-http is a great toolkit for building backends for single-page or mobile applications. 
+
 ## Getting Started
 
 Download an install [SBT][sbt] and run it on the command line to create a new [Scala][scala]/[Angular][angularweb] project using the skeleton:
