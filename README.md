@@ -6,7 +6,9 @@ NOTE: [SBT][sbt] is used to instantiate the skeleton
 
 ### About Akka HTTP and Angular
 
-[Akka HTTP](http://doc.akka.io/docs/akka/2.4.2/scala/http/index.html) is an Akka module, originating from spray.io, for building reactive REST services with an elegant DSL. akka-http is a great toolkit for building backends for single-page or mobile applications. 
+[Akka HTTP](https://doc.akka.io/docs/akka/current/guide/modules.html#http) is an Akka module, originating from spray.io, for building reactive REST services with an elegant DSL. Akka HTTP is a great toolkit for building backends for single-page or mobile applications. 
+
+> Akka provides a library to construct or consume such HTTP services by giving a set of tools to create HTTP services (and serve them) and a client that can be used to consume other services. These tools are particularly suited to streaming in and out a large set of data or real-time events by leveraging the underlying model of Akka Streams.
 
 ## Getting Started
 
