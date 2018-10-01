@@ -12,17 +12,19 @@ NOTE: [SBT][sbt] is used to instantiate the skeleton
 
 ## Getting Started
 
-Download an install [SBT][sbt] and run it on the command line to create a new [Scala][scala]/[Angular][angularweb] project using the skeleton:
+Choose a location on your file system for your project. The template will prompt you for a set of variables that will eventually init your new [Scala][scala]/[Angular][angularweb] project. Note that it can take from a few seconds to a few minutes for sbt to download dependencies.
+
+To create your project, follow these steps:
+
+1. Open a console and change into the directory you selected for your project.
+2. Download an install [SBT][sbt] 
+3. Run the following command:
 
 ```
 $ sbt new sentenza/scala-akka-http-angular.g8
 ```
 
-The template parameters are as follows:
-
-* `name` is the name of the path the skeleton will instantiate to;
-
-Once instantiated, you'll need to...
+The template prompts for the a series of parameters. Press Enter to accept the defaults or specify your own values.
 
 ### Init the Angular Front End application
 
